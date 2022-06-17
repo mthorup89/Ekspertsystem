@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.shape.Line?>
+<?import javafx.scene.shape.Polygon?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="800.0" prefWidth="1300.0" xmlns="http://javafx.com/javafx/18" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample.ExpertEnterLRController">
+   <children>
+      <Pane layoutY="54.0" prefHeight="746.0" prefWidth="192.0" style="-fx-background-color: #008B8B;">
+         <children>
+            <Pane layoutX="-6.0" layoutY="-1.0" prefHeight="60.0" prefWidth="199.0">
+               <children>
+                  <Text fill="WHITE" layoutX="52.0" layoutY="35.0" strokeType="OUTSIDE" strokeWidth="0.0" text="High renewables" wrappingWidth="128.99999999999977" />
+                  <Polygon fill="WHITE" layoutX="35.0" layoutY="86.0" points="-8.5, -54.0, -3.5, -61.5, -13.75, -61.5" stroke="WHITE" strokeType="INSIDE" strokeWidth="0.0" />
+               </children>
+            </Pane>
+            <Button fx:id="CalculateHRPage" layoutX="-6.0" layoutY="57.0" mnemonicParsing="false" onAction="#CalculateHR" prefHeight="43.0" prefWidth="199.0" style="-fx-background-color: #008B8B;" text="Calculate high renewables" textFill="WHITE" />
+            <Button fx:id="EnterHRPage" layoutY="100.0" mnemonicParsing="false" onAction="#EnterHR" prefHeight="43.0" prefWidth="192.0" style="-fx-background-color: #008B8B;" text="Enter high renewables values" textFill="WHITE" />
+            <Button fx:id="EnterLRPage" layoutY="241.0" mnemonicParsing="false" onAction="#EnterLR" prefHeight="43.0" prefWidth="192.0" style="-fx-background-color: #66CDAA;" text="Enter low renewables values" textFill="WHITE" />
+            <Pane layoutX="-3.0" layoutY="143.0" prefHeight="60.0" prefWidth="199.0">
+               <children>
+                  <Text fill="WHITE" layoutX="52.0" layoutY="35.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Low renewables" wrappingWidth="128.99999999999977" />
+                  <Polygon fill="WHITE" layoutX="35.0" layoutY="86.0" points="-8.5, -54.0, -3.5, -61.5, -13.75, -61.5" stroke="WHITE" strokeType="INSIDE" strokeWidth="0.0" />
+               </children>
+            </Pane>
+            <Button fx:id="CalculateLRPage" alignment="CENTER" layoutX="-3.0" layoutY="198.0" mnemonicParsing="false" onAction="#CalculateLR" prefHeight="43.0" prefWidth="192.0" style="-fx-background-color: #008B8B;" text="Calculate low renewables" textFill="WHITE" />
+         </children>
+      </Pane>
+      <Line endX="-28.0" endY="452.0" layoutX="220.0" layoutY="349.0" startX="-28.0" startY="-295.0" />
+      <Pane prefHeight="54.0" prefWidth="1300.0" style="-fx-background-color: #008B8B;">
+         <children>
+            <Text fill="WHITE" layoutX="62.0" layoutY="40.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Volue">
+               <font>
+                  <Font size="32.0" />
+               </font>
+            </Text>
+         </children>
+      </Pane>
+      <TextField fx:id="LRAvgWindValue" layoutX="266.0" layoutY="120.0" prefHeight="43.0" prefWidth="176.0" />
+      <Label layoutX="252.0" layoutY="85.0" prefHeight="35.0" prefWidth="219.0" text="Average wind value">
+         <font>
+            <Font size="24.0" />
+         </font>
+      </Label>
+      <Label layoutX="230.0" layoutY="229.0" prefHeight="35.0" prefWidth="286.0" text="Under average wind value">
+         <font>
+            <Font size="24.0" />
+         </font>
+      </Label>
+      <TextField fx:id="LRUnderAvgWindValue" layoutX="266.0" layoutY="264.0" prefHeight="43.0" prefWidth="176.0" />
+      <Label layoutX="254.0" layoutY="370.0" prefHeight="35.0" prefWidth="199.0" text="Average sun value">
+         <font>
+            <Font size="24.0" />
+         </font>
+      </Label>
+      <TextField fx:id="LRSunValue" layoutX="273.0" layoutY="408.0" prefHeight="43.0" prefWidth="176.0" />
+      <Button fx:id="LREnterAvgWind" layoutX="308.0" layoutY="172.0" mnemonicParsing="false" onAction="#LRActionEnterAvgWind" prefHeight="25.0" prefWidth="93.0" text="Enter Value" />
+      <Button fx:id="LREnterUnderAVGWind" layoutX="307.0" layoutY="314.0" mnemonicParsing="false" onAction="#LRActionEnterUnderAvgWind" prefHeight="25.0" prefWidth="93.0" text="Enter Value" />
+      <Button fx:id="LREnterAVGSun" layoutX="308.0" layoutY="460.0" mnemonicParsing="false" onAction="#LRActionEnterAVGSun" prefHeight="25.0" prefWidth="93.0" text="Enter Value" />
+      <TextField fx:id="LRCurrentAVGWindValue" alignment="CENTER" layoutX="816.0" layoutY="124.0" prefHeight="35.0" prefWidth="129.0" />
+      <Label layoutX="731.0" layoutY="85.0" prefHeight="35.0" prefWidth="298.0" text="Current average wind value">
+         <font>
+            <Font size="24.0" />
+         </font>
+      </Label>
+      <Label layoutX="704.0" layoutY="229.0" prefHeight="35.0" prefWidth="366.0" text="Current under average wind value">
+         <font>
+            <Font size="24.0" />
+         </font>
+      </Label>
+      <Label layoutX="739.0" layoutY="370.0" prefHeight="35.0" prefWidth="286.0" text="Current average sun value">
+         <font>
+            <Font size="24.0" />
+         </font>
+      </Label>
+      <TextField fx:id="LRCurrentAVGSunValue" alignment="CENTER" layoutX="816.0" layoutY="412.0" prefHeight="35.0" prefWidth="129.0" />
+      <TextField fx:id="LRCurrentUnderAVGWindValue" alignment="CENTER" layoutX="817.0" layoutY="268.0" prefHeight="35.0" prefWidth="129.0" />
+      <Label layoutX="1245.0" layoutY="85.0" prefHeight="35.0" prefWidth="167.0">
+         <font>
+            <Font size="24.0" />
+         </font>
+      </Label>
+      <Line endX="799.0" endY="-295.0" layoutX="258.0" layoutY="511.0" startX="-28.0" startY="-295.0" />
+      <Line endX="799.0" endY="-295.0" layoutX="258.0" layoutY="649.0" startX="-28.0" startY="-295.0" />
+      <Line endX="799.0" endY="-295.0" layoutX="258.0" layoutY="795.0" startX="-28.0" startY="-295.0" />
+   </children>
+</AnchorPane>
